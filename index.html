@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>matching game-zodiac</title>
+    <link rel="stylesheet" href="style/normalize-fwd.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text&family=Josefin+Sans:wght@300;400&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text&family=Josefin+Sans:wght@300;400&family=Playfair+Display:wght@400;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="background-blur"></div>
+    <header>
+      <h1>ZODIAC</h1>
+      <div class="game-start" id="game-start">Game Start</div>
+      <div class="game game-board">
+        <div class="game game-music">
+          Music: &nbsp;<span id="on"> on</span>/<span id="off"> off</span></span>
+        </div>     
+        <div class="game timer">
+          Time: &nbsp;<span class="countdown"> 60 </span> seconds
+        </div>
+        <div class="game flips">Flips: <span id="flips"> 0</span></div>
+        <div class="game match-cards">
+          Matches: &nbsp;<span id="match-cards"> 0</span>
+        </div>
+        <div class="game pause" id="pause">pause</div>
+        <div class="game stop" id="stop">stop</div>
+      </div>
+
+    </header>
+    <main>
+      <div class="cards-container" id="cards-container"></div>
+    </main>
+    <footer>
+      <p>&copy; Kaia</p>
+    </footer>
+  </body>
+</html>

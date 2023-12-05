@@ -1,0 +1,102 @@
+{
+  "images": {
+    "zodiacs": [
+      {
+        "src": "images/1.jpeg",
+        "alt": "Rat",
+        "id": "1"
+      },
+      {
+        "src": "images/2.jpeg",
+        "alt": "Ox",
+        "id": "2"
+      },
+      {
+        "src": "images/3.jpeg",
+        "alt": "Tiger",
+        "id": "3"
+      },
+      {
+        "src": "images/4.jpeg",
+        "alt": "Rabbit",
+        "id": "4"
+      },
+      {
+        "src": "images/5.jpeg",
+        "alt": "Dragon",
+        "id": "5"
+      },
+      {
+        "src": "images/6.jpeg",
+        "alt": "Snake",
+        "id": "6"
+      },
+      {
+        "src": "images/7.jpeg",
+        "alt": "Horse",
+        "id": "7"
+      },
+      {
+        "src": "images/8.jpeg",
+        "alt": "Goat",
+        "id": "8"
+      },
+      {
+        "src": "images/9.jpeg",
+        "alt": "Monkey",
+        "id": "9"
+      },
+      {
+        "src": "images/10.jpeg",
+        "alt": "Rooster",
+        "id": "10"
+      },
+      {
+        "src": "images/11.jpeg",
+        "alt": "Dog",
+        "id": "11"
+      },
+      {
+        "src": "images/12.jpeg",
+        "alt": "Pig",
+        "id": "12"
+      }
+    ],
+    "frontImage": [
+      {
+        "src": "images/card-front1.png",
+        "alt": "front-card"
+      },
+      {
+        "src": "images/card-front2.png",
+        "alt": "front-card"
+      },
+      {
+        "src": "images/card-front3.png",
+        "alt": "front-card"
+      },
+      {
+        "src": "images/card-front4.png",
+        "alt": "front-card"
+      }
+    ],
+    "backgroundImage": [
+      {
+        "src": "images/bg1.png",
+        "alt": "background-image"
+      },
+      {
+        "src": "images/bg2.png",
+        "alt": "background-image"
+      },
+      {
+        "src": "images/bg3.png",
+        "alt": "background-image"
+      },
+      {
+        "src": "images/bg4.png",
+        "alt": "background-image"
+      }
+    ]
+  }
+}

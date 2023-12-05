@@ -1,0 +1,248 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+}
+body {
+  background-color: #00000067;
+  background-size: cover;
+  font-family: "Big Shoulders Stencil Text", Georgia, "Times New Roman", Times,
+    serif;
+  color: #ffffff;
+  line-height: 1.5;
+}
+/* Typography
+--------------------------------------------- */
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  margin: 0;
+  font-family: "Press Start 2P", "Arial Narrow", Arial, sans-serif;
+  margin-top: 0.5rem;
+}
+h2 {
+  text-align: center;
+  color: #bf00ff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+/* body
+--------------------------------------------- */
+.background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  backdrop-filter: blur(1px);
+  width: 100%;
+  height: 100%;
+}
+
+/* header
+--------------------------------------------- */
+
+.game {
+  margin: 0.5rem 2rem;
+  display: flex;
+  font-size: 2rem;
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+}
+
+.game-start {
+  cursor: pointer;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #e958ff;
+  font-family: "Press Start 2P", "Arial Narrow", Arial, sans-serif;
+  animation: start-game 500ms forwards;
+}
+
+.countdown,
+#flips,
+#match-cards {
+  color: #bf00ff;
+  font-weight: bold;
+  width: 3rem;
+}
+.pause,
+.stop,
+#on,
+#off {
+  cursor: pointer;
+  width: 3rem;
+}
+.pause {
+  width: 4rem;
+}
+.pause:hover,
+.stop:hover,
+#on:hover,
+#off:hover {
+  color: #bf00ff;
+  background-color: #e6e6e6;
+  border-radius: 1rem;
+  padding: 0 0.5rem;
+}
+.clickBackground {
+  background-color: #e6e6e6;
+  color: #bf00ff;
+  border-radius: 1rem;
+  transition: background-color 0.5s ease;
+  padding: 0 0.5rem;
+}
+
+/* main
+--------------------------------------------- */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+  justify-content: center;
+  margin: auto 10rem;
+}
+.card {
+  height: 190px;
+  width: 300px;
+  overflow: hidden;
+  object-fit: cover;
+  perspective: 1000px;
+  box-shadow: 0 3px 10px rgba(200, 200, 200, 0.5);
+  border-radius: 10px;
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.front {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  transform: rotateY(0);
+}
+.back {
+  transform: rotateY(180deg);
+}
+.card .front,
+.card .back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.7s;
+}
+.card.is-flipped .front {
+  transform: rotateY(180deg);
+}
+.card.is-flipped .back {
+  transform: rotateY(0deg);
+}
+.game-win,
+.game-lose,
+.pause-game,
+.stop-game {
+  position: fixed;
+  top: 32rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0000006d;
+  padding: 20rem 25rem;
+  z-index: 10;
+}
+.message {
+  color: #fff;
+  font-size: 8rem;
+  /* font-family: "Press Start 2P", Arial, Helvetica, sans-serif; */
+  z-index: 15;
+  top: 2rem;
+  padding: 3rem;
+  transform: translate(0%, -50%);
+  left: 40%;
+  width: 60rem;
+  white-space: pre-wrap;
+}
+
+.yes,
+.no,
+.back-game {
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  background-color: #ff62ef;
+  padding: 1rem 4rem;
+  font-size: 5rem;
+  z-index: 20;
+}
+.yes {
+  transform: translate(-200%, -20%);
+}
+.no {
+  transform: translate(100%, -20%);
+}
+.back-game {
+  transform: translate(-50%, -20%);
+}
+@keyframes start-game {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 8rem;
+  }
+}
+
+/* footer
+--------------------------------------------- */
+footer {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Press Start 2P", "Arial Narrow", Arial, sans-serif;
+}
+footer p {
+  margin-top: 3rem;
+  backdrop-filter: blur(10px);
+}
